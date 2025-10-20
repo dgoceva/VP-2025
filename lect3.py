@@ -118,8 +118,11 @@ for row in range(3):
     m.append(l)
 print(m)
 
-# m = np.matrix([[1,2],[4,5]])
-# print(type(m),m)
+m = np.matrix([[1,2],[4,5]])
+print(type(m),m)
 
 l2 = [x for x in np.arange(0,10,2.5)]
 print(type(l2),l2)
+
+num = complex(1,2)
+print(type(num),num)
