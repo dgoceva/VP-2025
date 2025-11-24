@@ -1,6 +1,7 @@
 
 from Student import Student
 from Group import Group
+from StudentError import StudentError
 
 if __name__=="__main__":
     group = Group()
@@ -14,4 +15,18 @@ if __name__=="__main__":
     group.delStudentByFNum(222)
     print(group)
     print(group.delStudentByAvMark(5))
+    print(group)
+    print(group.group[0].getFNum())
+    print(group.group[0].getName())
+    print(group.group[0].getAvMark())
+    try:
+        group.group[0].setFNum(int(input("FNum=")))
+        group.group[0].setName("")
+        group.group[0].setAvMark(1)
+        group.group[0].setFNum(0)
+        print(group)
+    except ValueError as e:
+        print(e)
+    except StudentError as e:
+        print(e)
     print(group)
